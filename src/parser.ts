@@ -22,6 +22,8 @@ export function parse(tokens: Token[]): Expression {
     throw new Error("Invalid expression");
   }
 
+  // TODO: Handle multi-operator expressions
+
   return {
     left: parse(tokens.slice(0, operatorIndex)),
     operator: tokens[operatorIndex].type as Operator,
