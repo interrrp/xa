@@ -1,5 +1,7 @@
-type Token = {
-  type: "number" | "plus" | "minus" | "mul" | "div";
+import { Operator } from "./common_types.ts";
+
+export type Token = {
+  type: "number" | Operator;
   value: string | number;
 };
 
