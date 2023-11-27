@@ -1,0 +1,21 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.208.0/"
+  },
+  "tasks": {
+    "start": "deno run -A src/main.ts",
+    "dev": "deno run -A --watch src/main.ts"
+  },
+  "lint": {
+    "rules": {
+      "include": [
+        "camelcase",
+        "eqeqeq",
+        "explicit-function-return-type",
+        "default-param-last",
+        "explicit-module-boundary-types",
+        "no-undef"
+      ]
+    }
+  }
+}
