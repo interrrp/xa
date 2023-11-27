@@ -20,16 +20,16 @@ export function tokenize(input: string): Token[] {
       }
 
       case character === "+":
-        tokens.push({ type: "plus", value: "+" });
+        tokens.push({ type: "+", value: "+" });
         break;
       case character === "-":
-        tokens.push({ type: "minus", value: "-" });
+        tokens.push({ type: "-", value: "-" });
         break;
       case character === "*":
-        tokens.push({ type: "mul", value: "*" });
+        tokens.push({ type: "*", value: "*" });
         break;
       case character === "/":
-        tokens.push({ type: "div", value: "/" });
+        tokens.push({ type: "/", value: "/" });
         break;
     }
   }

@@ -7,7 +7,7 @@ Deno.test("correctly parses valid input", () => {
     parse(tokenize("1+2")),
     {
       left: 1,
-      operator: "plus",
+      operator: "+",
       right: 2,
     },
   );
@@ -18,7 +18,7 @@ Deno.test("correctly parses valid input with decimals", () => {
     parse(tokenize("1.2+3.4")),
     {
       left: 1.2,
-      operator: "plus",
+      operator: "+",
       right: 3.4,
     },
   );

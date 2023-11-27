@@ -15,14 +15,14 @@ export function parse(tokens: Token[]): Expression {
   console.log(tokens);
 
   const operatorIndex = tokens.findIndex((token) =>
-    ["plus", "minus", "mul", "div"].includes(token.type)
+    ["+", "-", "*", "/"].includes(token.type)
   );
 
   if (operatorIndex === -1) {
     throw new Error("Invalid expression");
   }
 
-  // TODO: Handle multi-operator expressions
+  // TODO: Handle *ti-operator expressions
 
   return {
     left: parse(tokens.slice(0, operatorIndex)),
@@ -34,7 +34,7 @@ export function parse(tokens: Token[]): Expression {
 function parseExpression(tokens: Token[]): Expression {
   if (
     tokens[0].type !== "number" ||
-    !["plus", "minus", "mul", "div"].includes(tokens[1].type) ||
+    !["+", "-", "*", "/"].includes(tokens[1].type) ||
     tokens[2].type !== "number"
   ) {
     throw new Error("Invalid expression");
